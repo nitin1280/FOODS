@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width:100%;
+    background: linear-gradient(0deg, rgba(195,34,83,1) 0%, rgba(253,187,45,1) 100%)
+}
+
+section nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: rgb(246, 62, 21);
+    box-shadow: 0 0 10px rgb(0,0,0,0.5);
+    z-index: 1000;
+    width: 100%;
+    height: 10%;
+   
+}
+.button {
+    background-color: rgb(246, 62, 21); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+    font-size: 16px;
+    position: relative;
+    left: 10%;
+    top: -20px;
+  }
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+    
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+   
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.2s linear;
+    width: 100px;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+section nav ul li a:hover::after{
+    width: 100%;
+}
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icone i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+section nav .icone i:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #000;
+    
+    line-height: 22px;
+    font-size: 70px;
+}
+section .main .men_image img{
+    width: 700px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 123px;
+    bottom: 120px;
+    line-height: 22px;
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(0deg, rgba(195,34,83,1) 0%, rgba(253,187,45,1) 100%)
+}
+
+.about .about_main .image img{
+    width: 300px;
+    position: relative;
+    top: 2px;
+}
+.about .about_main .about_text h1{
+    border: 1px solid;
+    background-color: rgb(246, 62, 21);
+    width: 100%;
+    height:auto;
+    margin: 20px;
+    padding: 20px;
+    
+}
+.about .about_main .about_text h1 span{
+    color: #000;
+    margin-right: 15px;
+    
+   
+}
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+    top: -30px;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    
+  font-size: medium;
+    position: relative;
+    left: 3%;
+    top: 5px;
+}
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Style menu bar */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Style hamburger icon */
+.menu label {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Style menu links */
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.menu li {
+    margin-right: 15px;
+}
+
+
+
+/* Show menu links when checkbox is checked */
+#menu-toggle:checked + .menu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    background: #fff; /* Background color for the dropdown */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ @media only screen and (max-width: 768px) {
+    
+    section{
+        overflow-x: hidden;
+    }
+    section nav ul li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    section .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu ul {
+    display: none;
+    }
+    section .main .men_text h1 {
+        font-size: 40px;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        text-align: center;
+    }
+
+    section .main .men_image img {
+        width: 50%;
+       
+    }
+
+    section p {
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+    }
+
+    .about .about_main {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .about .about_main .image img {
+        width: 100%;
+    }
+
+    .about .about_main .about_text h1 {
+        font-size: 40px;
+        bottom: 0;
+        top: 0;
+    }
+
+    .about .about_main .about_text p {
+        width: 100%;
+        margin-right: 0;
+        left: 0;
+    }
+} 
+
+
